@@ -107,3 +107,71 @@ def bank(a, years):
 
 result = bank(50000, 10)
 print(f'--------------=итоговая\ сума ================={result}')
+print('///////////////////////Задача 6///////////////////////////////')
+# Напишите код, который переводит целое число в строку, при том что его
+# можно применить в любой системе счисления. ValueError: int() base must be >= 2 and <= 36, or 0
+
+str_num = 37
+
+str_letter = 'ACD'
+
+print(int('ACD', 32))
+print('///////////////////////Задача 7///////////////////////////////')
+
+# Нужно вывести первые n строк треугольника Паскаля.
+# В этом треугольнике на вершине и по бокам стоят единицы,
+# а каждое число внутри равно сумме двух расположенных над ним чисел.
+# qqq =[]
+# def tri_pascale(n):
+#     for ggg in range(1, n):
+#         if
+#         qqq.append(ggg)
+#
+#
+#
+#
+# tri_pascale(5)
+
+
+
+
+
+
+
+print('///////////////////////Задача 8 number prime///////////////////////////////')
+
+
+# Написать функцию is_prime, принимающую 1 аргумент — число от 0 до 1000,
+# и возвращающую True, если оно простое, и False - иначе
+
+def is_prime(number):
+    d = 2
+    while number % d != 0 and d * d <= number:
+        d += 1
+    # return d * d > number
+
+    return f'{number}  составное число ' if d * d <= number else f'{number} prime число'
+
+
+print(is_prime(5))
+
+print('# ?///////////2 caase ////////////////////////')
+
+
+def is_primme(number):
+    """Эту функцию можно сильно оптимизировать. Подумайте, как"""
+
+    if number == 1:
+        return number != 1  # 1 - не простое число
+    lst = []
+    for possible_divisor in range(2, number):
+        if number % possible_divisor == 0:
+            lst.append(possible_divisor)
+        print(lst)
+        return number % possible_divisor != 0
+
+    return True
+
+
+print(is_primme(50))
+
